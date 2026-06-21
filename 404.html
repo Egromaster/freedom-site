@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freedom — Ошибка 404</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .error-wrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px;
+    flex-wrap: wrap;
+  }
+  .error-balloon {
+    width: 260px; height: 260px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    font-size: 150px; font-weight: 700;
+    color: var(--green);
+    background: radial-gradient(circle at 35% 30%, #eaf6ee, #cfe3ec);
+    box-shadow: inset -6px -6px 16px rgba(0,0,0,.12);
+  }
+  .error-text { font-size: 70px; line-height: 1.1; }
+  .back-link {
+    display: block;
+    margin: 0 auto 40px;
+    width: max-content;
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+  @media (max-width: 600px){ .error-text{font-size:46px} .error-balloon{width:180px;height:180px;font-size:100px} }
+</style>
+</head>
+<body class="bg-purple">
+
+<div class="error-wrap">
+  <div class="error-balloon">F</div>
+  <div class="error-text">Ошибка<br>404</div>
+</div>
+
+<a href="index.html" class="btn btn-green back-link">На главную</a>
+
+</body>
+</html>
