@@ -4,71 +4,37 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Freedom — Ошибка 404</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
-  body{font-family:'Comfortaa',sans-serif;color:#1f1f1f;background:#8b8bea}
-  img{display:block;max-width:100%}
-  a{text-decoration:none;color:inherit}
-  @keyframes fdFloatBig{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-16px) rotate(2deg)}}
-  @media(max-width:600px){
-    [data-badge404]{width:160px!important;height:160px!important}
-    [data-nav]{padding-left:18px!important;padding-right:18px!important}
-  }
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div style="background:#8b8bea;min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden">
+<div class="page page--screen bg-purple">
 
-  <nav data-nav style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 40px;background:#d9d9d9;box-shadow:0 2px 14px rgba(40,40,80,.08)">
-    <a href="index.html" style="display:flex;align-items:center">
-      <img src="assets/logo-freedom.jpg" alt="Freedom" style="height:46px;width:auto">
-    </a>
-    <div style="display:flex;gap:12px">
-      <a href="merch.html" style="background:#a9a9ef;padding:10px 26px;border-radius:14px;font-size:15px;color:#33335f;transition:transform .15s,filter .15s" data-hover="filter:brightness(1.06);transform:translateY(-1px)">мерч</a>
-      <a href="contacts.html" style="background:#a9a9ef;padding:10px 26px;border-radius:14px;font-size:15px;color:#33335f;transition:transform .15s,filter .15s" data-hover="filter:brightness(1.06);transform:translateY(-1px)">поддержка</a>
+  <nav class="nav">
+    <a href="index.html" class="nav__logo"><img src="assets/logo-freedom.jpg" alt="Freedom"></a>
+    <div class="nav__links">
+      <a href="merch.html" class="nav__link">мерч</a>
+      <a href="contacts.html" class="nav__link">поддержка</a>
     </div>
   </nav>
 
-  <div style="flex:1;display:flex;align-items:center;justify-content:center;padding:48px 40px">
-    <div style="display:flex;align-items:center;justify-content:center;gap:56px;flex-wrap:wrap;max-width:900px">
-      <img src="assets/logo-badge.jpg" alt="F" data-badge404 style="width:240px;height:240px;border-radius:50%;box-shadow:0 24px 56px rgba(40,40,80,.28);animation:fdFloatBig 6s ease-in-out infinite">
-      <div style="text-align:left">
-        <div style="font-weight:700;font-size:clamp(64px,11vw,128px);line-height:.95;color:#1d1d3a;letter-spacing:-2px">404</div>
-        <div style="font-family:'Caveat',cursive;font-size:clamp(30px,5vw,46px);color:#e7e7ef;margin:6px 0 28px">страница потерялась</div>
-        <a href="index.html" style="display:inline-flex;align-items:center;background:#8cc88c;color:#244024;font-weight:700;font-size:16px;padding:15px 38px;border-radius:16px;box-shadow:0 10px 24px rgba(40,40,80,.16);transition:transform .15s,filter .15s" data-hover="transform:translateY(-2px);filter:brightness(1.05)">На главную</a>
+  <div class="error">
+    <div class="error__inner">
+      <img src="assets/logo-badge.jpg" alt="F" class="error__badge">
+      <div>
+        <div class="error__code">404</div>
+        <div class="error__text">страница потерялась</div>
+        <a href="index.html" class="btn btn--green">На главную</a>
       </div>
     </div>
   </div>
 
-  <footer style="background:#8b8bea;padding:30px 40px 40px">
-    <div style="max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:14px;opacity:.85">
-      <div style="font-family:'Caveat',cursive;font-size:24px;color:#3f8f49;font-weight:700">Freedom</div>
+  <footer class="section footer--dim bg-purple">
+    <div class="container footer__brand">
+      <div class="footer__name">Freedom</div>
     </div>
   </footer>
 
 </div>
-<script>
-document.addEventListener('DOMContentLoaded',function(){
-  document.querySelectorAll('[data-hover]').forEach(function(el){
-    var x=el.getAttribute('data-hover'),b;
-    el.addEventListener('mouseenter',function(){b=el.getAttribute('style')||'';el.setAttribute('style',b+';'+x);});
-    el.addEventListener('mouseleave',function(){if(b!==undefined)el.setAttribute('style',b);});
-  });
-  document.querySelectorAll('[data-focus]').forEach(function(el){
-    var x=el.getAttribute('data-focus'),b;
-    el.addEventListener('focus',function(){b=el.getAttribute('style')||'';el.setAttribute('style',b+';'+x);});
-    el.addEventListener('blur',function(){if(b!==undefined)el.setAttribute('style',b);});
-  });
-  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var els=Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
-  if(reduce||!('IntersectionObserver'in window)||!els.length)return;
-  var obs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='none';obs.unobserve(e.target);}});},{threshold:0.12});
-  requestAnimationFrame(function(){els.forEach(function(el,i){el.style.opacity='0';el.style.transform='translateY(26px)';el.style.transition='opacity .7s ease '+((i%3)*0.05)+'s, transform .7s ease '+((i%3)*0.05)+'s';obs.observe(el);});});
-});
-</script>
+<script src="scripts/script.js" defer></script>
 </body>
 </html>

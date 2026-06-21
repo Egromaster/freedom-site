@@ -1,0 +1,27 @@
+/* Адаптив (медиа-запросы) */
+@media(max-width:880px){
+  .hero{grid-template-columns:1fr;gap:30px}
+}
+@media(max-width:760px){
+  .contacts-grid{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  .desc-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .merch-grid{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto}
+}
+@media(max-width:600px){
+  .section{padding-left:18px;padding-right:18px}
+  .nav{padding-left:18px;padding-right:18px;gap:10px}
+  .error__badge{width:160px;height:160px}
+}
+@media(max-width:480px){
+  .nav__links .nav__link{padding:9px 18px;font-size:13px}
+  .form__row{grid-template-columns:1fr}
+}
+/* уважение к настройке «меньше движения» */
+@media(prefers-reduced-motion:reduce){
+  .reveal{animation:none}
+  .footer__badge,.error__badge{animation:none}
+}

@@ -4,145 +4,93 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Freedom — изучай язык свободно</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  body{font-family:'Comfortaa',sans-serif;color:#1f1f1f;background:#8b8bea}
-  img{display:block;max-width:100%}
-  a{text-decoration:none;color:inherit}
-  @keyframes fdRiseF{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
-  @keyframes fdFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
-  @media(max-width:880px){ [data-hero]{grid-template-columns:1fr!important;gap:30px!important} }
-  @media(max-width:680px){ [data-desc2]{grid-template-columns:1fr!important} }
-  @media(max-width:600px){
-    [data-sec]{padding-left:18px!important;padding-right:18px!important}
-    [data-nav]{padding-left:18px!important;padding-right:18px!important;gap:10px!important}
-    [data-pricecard]{padding-left:20px!important;padding-right:20px!important}
-  }
-  @media(max-width:480px){
-    [data-navlinks] a{padding:9px 18px!important;font-size:13px!important}
-  }
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div style="background:#8b8bea;overflow-x:hidden">
+<div class="page bg-purple">
 
-  <nav data-nav style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 40px;background:#d9d9d9;box-shadow:0 2px 14px rgba(40,40,80,.08)">
-    <a href="index.html" style="display:flex;align-items:center">
-      <img src="assets/logo-freedom.jpg" alt="Freedom" style="height:46px;width:auto">
-    </a>
-    <div data-navlinks style="display:flex;gap:12px">
-      <a href="merch.html" style="background:#a9a9ef;padding:10px 26px;border-radius:14px;font-size:15px;color:#33335f;transition:transform .15s,filter .15s" data-hover="filter:brightness(1.06);transform:translateY(-1px)">мерч</a>
-      <a href="contacts.html" style="background:#a9a9ef;padding:10px 26px;border-radius:14px;font-size:15px;color:#33335f;transition:transform .15s,filter .15s" data-hover="filter:brightness(1.06);transform:translateY(-1px)">поддержка</a>
+  <nav class="nav">
+    <a href="index.html" class="nav__logo"><img src="assets/logo-freedom.jpg" alt="Freedom"></a>
+    <div class="nav__links">
+      <a href="merch.html" class="nav__link">мерч</a>
+      <a href="contacts.html" class="nav__link">поддержка</a>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section data-sec style="background:#8b8bea;padding:64px 40px 84px">
-    <div data-hero style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center">
-      <div data-reveal>
-        <h1 style="font-family:'Comfortaa',sans-serif;font-weight:700;font-size:clamp(34px,4.4vw,56px);line-height:1.12;color:#1d1d3a;letter-spacing:-.5px">Заговори на иностранном языке <span style="font-family:'Caveat',cursive;font-weight:700;color:#3f8f49;font-size:1.18em">свободно</span></h1>
-        <p style="margin-top:22px;font-size:18px;line-height:1.6;color:#2c2c52;max-width:520px">Без зубрёжки, страха ошибки и школьного стресса. Упор на живую разговорную практику, гибкий график и персональную поддержку.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:34px">
-          <a href="#tariffs" style="display:inline-flex;align-items:center;background:#f5a623;color:#1f1f1f;font-weight:700;font-size:16px;padding:15px 34px;border-radius:16px;box-shadow:0 8px 20px rgba(245,166,35,.32);transition:transform .15s,filter .15s" data-hover="transform:translateY(-2px);filter:brightness(1.04)">Выбрать тариф</a>
-          <a href="contacts.html" style="display:inline-flex;align-items:center;background:#8cc88c;color:#244024;font-weight:600;font-size:16px;padding:15px 32px;border-radius:16px;transition:transform .15s,filter .15s" data-hover="transform:translateY(-2px);filter:brightness(1.04)">Написать нам</a>
+  <section class="section section--hero bg-purple">
+    <div class="container hero">
+      <div class="reveal">
+        <h1 class="hero__title">Заговори на иностранном языке <span class="hero__accent">свободно</span></h1>
+        <p class="hero__text">Без зубрёжки, страха ошибки и школьного стресса. Упор на живую разговорную практику, гибкий график и персональную поддержку.</p>
+        <div class="hero__actions">
+          <a href="#tariffs" class="btn btn--orange">Выбрать тариф</a>
+          <a href="contacts.html" class="btn btn--green">Написать нам</a>
         </div>
       </div>
-      <div data-reveal>
-        <div style="border-radius:28px;overflow:hidden;background:#f5a623;box-shadow:0 22px 50px rgba(40,40,80,.22)">
-          <img src="assets/hero.jpg" alt="Студентка Freedom" style="width:100%;height:100%;object-fit:cover">
+      <div class="reveal">
+        <div class="hero__media"><img src="assets/hero.jpg" alt="Студентка Freedom"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ТАРИФЫ -->
+  <section id="tariffs" class="section bg-grey">
+    <div class="container--narrow">
+      <h2 class="pricing__title reveal">Тарифы</h2>
+      <p class="pricing__subtitle reveal">выбери свой темп обучения</p>
+      <div class="tariffs">
+        <div class="tariff reveal">
+          <div class="tariff__name">Начинающий</div>
+          <span class="price price--green">5999₽ / мес</span>
+        </div>
+        <div class="tariff reveal">
+          <div class="tariff__name">Продвинутый</div>
+          <span class="price price--green">9999₽ / мес</span>
+        </div>
+        <div class="tariff tariff--featured reveal">
+          <div class="tariff__head">
+            <span class="tariff__badge">хит выбора</span>
+            <div class="tariff__name">Максимальный</div>
+          </div>
+          <span class="price price--orange">15999₽ / мес</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PRICING -->
-  <section id="tariffs" data-sec style="background:#e7e7ef;padding:74px 40px">
-    <div style="max-width:920px;margin:0 auto">
-      <h2 data-reveal style="text-align:center;font-weight:700;font-size:clamp(26px,3.2vw,38px);color:#1d1d3a;margin-bottom:8px">Тарифы</h2>
-      <p data-reveal style="text-align:center;font-family:'Caveat',cursive;font-size:24px;color:#5a5a8a;margin-bottom:42px">выбери свой темп обучения</p>
-
-      <div style="display:flex;flex-direction:column;gap:18px">
-        <div data-reveal style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:#fff;border-radius:20px;padding:24px 30px;box-shadow:0 6px 16px rgba(40,40,80,.06);transition:transform .18s,box-shadow .18s" data-hover="transform:translateY(-3px);box-shadow:0 14px 30px rgba(40,40,80,.12)">
-          <div style="font-weight:700;font-size:21px;color:#1d1d3a">Начинающий</div>
-          <div style="display:flex;align-items:center;gap:18px">
-            <span style="font-family:'Caveat',cursive;font-size:30px;color:#2c4a2c;background:#8cc88c;padding:8px 26px;border-radius:14px;font-weight:700">5999₽ / мес</span>
-          </div>
+  <!-- ОПИСАНИЯ -->
+  <section class="section bg-purple">
+    <div class="container--narrow">
+      <div class="desc-grid">
+        <div class="desc-card reveal">
+          <h3 class="desc-card__title">Начинающий</h3>
+          <p class="desc-card__text">В тариф входят все онлайн-уроки, а также личные консультации раз в месяц.</p>
         </div>
-
-        <div data-reveal style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:#fff;border-radius:20px;padding:24px 30px;box-shadow:0 6px 16px rgba(40,40,80,.06);transition:transform .18s,box-shadow .18s" data-hover="transform:translateY(-3px);box-shadow:0 14px 30px rgba(40,40,80,.12)">
-          <div style="font-weight:700;font-size:21px;color:#1d1d3a">Продвинутый</div>
-          <div style="display:flex;align-items:center;gap:18px">
-            <span style="font-family:'Caveat',cursive;font-size:30px;color:#2c4a2c;background:#8cc88c;padding:8px 26px;border-radius:14px;font-weight:700">9999₽ / мес</span>
-          </div>
+        <div class="desc-card reveal">
+          <h3 class="desc-card__title">Продвинутый</h3>
+          <p class="desc-card__text">Всё из тарифа «Начинающий», а также личная поддержка 24/7.</p>
         </div>
-
-        <div data-reveal style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:#fff;border-radius:20px;padding:24px 30px;box-shadow:0 10px 26px rgba(245,166,35,.18);border:2px solid #f5a623;transition:transform .18s,box-shadow .18s" data-hover="transform:translateY(-3px);box-shadow:0 16px 34px rgba(245,166,35,.28)">
-          <div style="display:flex;flex-direction:column;gap:6px">
-            <span style="font-family:'Caveat',cursive;font-size:19px;color:#c87f08;line-height:1">хит выбора</span>
-            <div style="font-weight:700;font-size:21px;color:#1d1d3a">Максимальный</div>
-          </div>
-          <div style="display:flex;align-items:center;gap:18px">
-            <span style="font-family:'Caveat',cursive;font-size:30px;color:#1f1f1f;background:#f5a623;padding:8px 26px;border-radius:14px;font-weight:700">15999₽ / мес</span>
-          </div>
-        </div>
+      </div>
+      <div class="desc-max reveal">
+        <h2 class="desc-max__title">Тариф максимальный</h2>
+        <p class="desc-max__text">Всё из тарифа «Продвинутый», а также еженедельные очные встречи для разговорных занятий. Они всегда проходят в разных интересных локациях — так язык изучать ещё интереснее.</p>
       </div>
     </div>
   </section>
 
-  <!-- DESCRIPTIONS -->
-  <section data-sec style="background:#8b8bea;padding:74px 40px">
-    <div style="max-width:920px;margin:0 auto">
-      <div data-desc2 style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px">
-        <div data-reveal style="background:#8cc88c;border-radius:22px;padding:30px 28px;color:#1f3a1f;transition:transform .18s" data-hover="transform:translateY(-3px)">
-          <h3 style="font-size:21px;margin-bottom:14px;color:#1f3a1f">Начинающий</h3>
-          <p style="line-height:1.65;font-size:15.5px;color:#26482a">В тариф входят все онлайн-уроки, а также личные консультации раз в месяц.</p>
-        </div>
-        <div data-reveal style="background:#8cc88c;border-radius:22px;padding:30px 28px;color:#1f3a1f;transition:transform .18s" data-hover="transform:translateY(-3px)">
-          <h3 style="font-size:21px;margin-bottom:14px;color:#1f3a1f">Продвинутый</h3>
-          <p style="line-height:1.65;font-size:15.5px;color:#26482a">Всё из тарифа «Начинающий», а также личная поддержка 24/7.</p>
-        </div>
+  <!-- ФУТЕР -->
+  <footer class="section bg-purple">
+    <div class="container footer">
+      <div class="footer__brand">
+        <img src="assets/logo-badge.jpg" alt="F" class="footer__badge">
+        <div class="footer__name">Freedom</div>
       </div>
-      <div data-reveal style="background:#f5a623;border-radius:24px;padding:40px 34px;box-shadow:0 16px 40px rgba(245,166,35,.28)">
-        <h2 style="text-align:center;font-size:clamp(24px,3vw,32px);margin-bottom:16px;color:#1f1f1f">Тариф максимальный</h2>
-        <p style="text-align:center;line-height:1.7;font-size:16.5px;color:#3a2a06;max-width:680px;margin:0 auto">Всё из тарифа «Продвинутый», а также еженедельные очные встречи для разговорных занятий. Они всегда проходят в разных интересных локациях — так язык изучать ещё интереснее.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer data-sec style="background:#8b8bea;padding:44px 40px 56px">
-    <div style="max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
-      <div style="display:flex;align-items:center;gap:18px">
-        <img src="assets/logo-badge.jpg" alt="F" style="width:78px;height:78px;border-radius:50%;box-shadow:0 10px 24px rgba(40,40,80,.18);animation:fdFloat 4.5s ease-in-out infinite">
-        <div style="font-family:'Caveat',cursive;font-size:30px;color:#3f8f49;font-weight:700">Freedom</div>
-      </div>
-      <a href="contacts.html" style="display:inline-flex;align-items:center;background:#8cc88c;color:#244024;font-weight:600;font-size:16px;padding:15px 36px;border-radius:16px;transition:transform .15s,filter .15s" data-hover="transform:translateY(-2px);filter:brightness(1.05)">Написать нам</a>
+      <a href="contacts.html" class="btn btn--green">Написать нам</a>
     </div>
   </footer>
 
 </div>
-<script>
-document.addEventListener('DOMContentLoaded',function(){
-  document.querySelectorAll('[data-hover]').forEach(function(el){
-    var x=el.getAttribute('data-hover'),b;
-    el.addEventListener('mouseenter',function(){b=el.getAttribute('style')||'';el.setAttribute('style',b+';'+x);});
-    el.addEventListener('mouseleave',function(){if(b!==undefined)el.setAttribute('style',b);});
-  });
-  document.querySelectorAll('[data-focus]').forEach(function(el){
-    var x=el.getAttribute('data-focus'),b;
-    el.addEventListener('focus',function(){b=el.getAttribute('style')||'';el.setAttribute('style',b+';'+x);});
-    el.addEventListener('blur',function(){if(b!==undefined)el.setAttribute('style',b);});
-  });
-  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var els=Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
-  if(reduce||!('IntersectionObserver'in window)||!els.length)return;
-  var obs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='none';obs.unobserve(e.target);}});},{threshold:0.12});
-  requestAnimationFrame(function(){els.forEach(function(el,i){el.style.opacity='0';el.style.transform='translateY(26px)';el.style.transition='opacity .7s ease '+((i%3)*0.05)+'s, transform .7s ease '+((i%3)*0.05)+'s';obs.observe(el);});});
-});
-</script>
+<script src="scripts/script.js" defer></script>
 </body>
 </html>

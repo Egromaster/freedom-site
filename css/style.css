@@ -1,0 +1,7 @@
+/* Главный файл стилей — подключает остальные по порядку.
+   В HTML достаточно подключить только css/style.css */
+@import url('fonts.css');
+@import url('reset.css');
+@import url('base.css');
+@import url('main.css');
+@import url('adaptive.css');
